@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products</title>
+</head>
+
+<body>
+    <h1>All
+        <%=category%> List</h1>
+    <ul>
+        <%for(let pro of products){%>
+
+            <li>
+                <a href="/products/<%=pro.id %>">
+                    <%= pro.name%>
+                </a>
+            </li>
+
+            <% } %>
+    </ul>
+    <a href="/products/new">Add new Product</a>
+    <% if(category!=='Products'){ %>
+        <a href="/products">View All</a>
+        <%}%>
+</body>
+
+</html>
